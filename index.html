@@ -1,25 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy & Terms of Service - Sira CV</title>
+    <meta name="description" content="Official Privacy Policy, Data Safety Disclosure, and Terms of Service for Sira CV (سيرة CV) Android Application by Amran Al-Gaafari.">
+    <meta name="robots" content="index, follow">
+    <title>Privacy Policy & Terms of Service | Sira CV (سيرة CV)</title>
     <link rel="icon" type="image/png" href="logo.png">
+
+    <!-- استيراد خطوط Cairo (للعربية) و Inter (للإنجليزية) لضمان أعلى درجات الوضوح -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- بيانات مهيكلة (Structured Data JSON-LD) لقارئات الذكاء الاصطناعي وفاحص Google Play -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Privacy Policy & Terms of Service - Sira CV",
+      "description": "Official Privacy Policy, Google Play Data Safety compliance, and Terms of Service for Sira CV mobile application.",
+      "inLanguage": ["en", "ar"],
+      "dateModified": "2026-10-28",
+      "publisher": {
+        "@type": "Person",
+        "name": "Amran Al-Gaafari",
+        "url": "https://github.com/amran29"
+      },
+      "about": {
+        "@type": "MobileApplication",
+        "name": "Sira CV - سيرة CV",
+        "operatingSystem": "Android",
+        "applicationCategory": "BusinessApplication"
+      }
+    }
+    </script>
+
     <style>
+        /* الهوية البصرية الرسمية لتطبيق Sira CV (AppColors) */
         :root {
-            --primary: #1E3A8A;
-            --primary-dark: #172554;
-            --primary-light: #EFF6FF;
-            --accent: #2563EB;
-            --bg: #F8FAFC;
-            --card-bg: #FFFFFF;
-            --text-main: #0F172A;
-            --text-body: #334155;
-            --text-muted: #64748B;
-            --border: #E2E8F0;
-            --success-bg: #F0FDF4;
-            --success-border: #BBF7D0;
-            --success-text: #166534;
+            --primary: #12627A;        /* AppColors.primary */
+            --primary-deep: #134F60;   /* AppColors.primaryDeep */
+            --primary-light: #176C82;  /* AppColors.primaryLight */
+            --secondary: #434B4B;      /* AppColors.secondary */
+            --accent: #85A4AD;         /* AppColors.accent */
+            --accent-soft: #EBF3F5;    /* تدرج فاتح جداً مشتق من الهوية */
+            --bg-light: #F5F7FA;       /* AppColors.lightBackground */
+            --bg-dark: #0C131A;        /* AppColors.darkBackground */
+            --white: #FFFFFF;
+            --error: #BA1A1A;
+            --text-dark: #111827;      /* أسود فاحم مريح وواضح جداً للقراءة */
+            --text-medium: #2D3748;    /* رمادي داكن عالي التباين للفقرات */
+            --border-color: #CBD5E1;
         }
 
         * {
@@ -28,37 +60,40 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.85;
-            background-color: var(--bg);
-            color: var(--text-main);
+            font-family: 'Inter', 'Cairo', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
             margin: 0;
             padding: 0;
+            line-height: 1.9;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
         }
 
-        /* Header Styling */
+        /* ترويسة الصفحة الرسمية */
         header {
-            background: linear-gradient(135deg, var(--primary-dark), var(--primary), var(--accent));
-            color: white;
-            padding: 55px 20px 45px;
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--primary-deep) 45%, var(--primary) 100%);
+            color: var(--white);
+            padding: 50px 20px 55px;
             text-align: center;
-            border-bottom: 1px solid var(--border);
+            border-bottom: 4px solid var(--accent);
         }
 
-        .logo-wrap {
-            width: 88px;
-            height: 88px;
-            margin: 0 auto 18px;
-            background: white;
+        .logo-container {
+            width: 92px;
+            height: 92px;
+            margin: 0 auto 16px;
+            background: var(--white);
             border-radius: 22px;
             padding: 10px;
-            box-shadow: 0 12px 28px rgba(0,0,0,0.22);
+            box-shadow: 0 10px 25px rgba(12, 19, 26, 0.35);
+            border: 2px solid var(--accent);
             display: flex;
             align-items: center;
             justify-content: center;
         }
 
-        .logo-wrap img {
+        .logo-container img {
             width: 100%;
             height: 100%;
             object-fit: contain;
@@ -66,154 +101,178 @@
 
         header h1 {
             margin: 0;
-            font-size: 28px;
+            font-size: 30px;
             font-weight: 800;
-            letter-spacing: -0.5px;
+            font-family: 'Cairo', 'Inter', sans-serif;
+            letter-spacing: -0.3px;
         }
 
-        header p {
-            margin: 10px auto 0;
-            opacity: 0.9;
-            font-size: 15px;
-            max-width: 600px;
+        header .subtitle {
+            margin: 8px auto 0;
+            font-size: 16px;
+            color: #E2E8F0;
+            font-weight: 500;
+            max-width: 680px;
         }
 
-        .badge-version {
-            display: inline-block;
-            background: rgba(255,255,255,0.15);
-            padding: 4px 14px;
-            border-radius: 20px;
-            font-size: 12px;
-            margin-top: 12px;
-            border: 1px solid rgba(255,255,255,0.25);
-        }
-
-        /* Language Switcher */
-        .controls-bar {
+        /* أزرار التحكم باللغة والعرض */
+        .lang-controls {
             display: flex;
             justify-content: center;
-            margin-top: 24px;
+            flex-wrap: wrap;
             gap: 10px;
+            margin-top: 24px;
         }
 
         .lang-btn {
-            background: rgba(255, 255, 255, 0.18);
-            color: white;
-            border: 1px solid rgba(255, 255, 255, 0.35);
-            padding: 8px 22px;
-            border-radius: 30px;
+            background: rgba(255, 255, 255, 0.14);
+            color: var(--white);
+            border: 1.5px solid rgba(255, 255, 255, 0.4);
+            padding: 9px 22px;
+            border-radius: 10px;
             cursor: pointer;
-            font-size: 13.5px;
+            font-family: 'Cairo', 'Inter', sans-serif;
+            font-size: 14.5px;
             font-weight: 700;
-            transition: all 0.25s ease;
+            transition: all 0.2s ease;
         }
 
         .lang-btn.active, .lang-btn:hover {
-            background: white;
-            color: var(--primary);
-            border-color: white;
-            transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            background: var(--white);
+            color: var(--primary-deep);
+            border-color: var(--white);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
 
-        /* Main Container */
-        .wrapper {
-            max-width: 960px;
+        /* حاوية الوثيقة القانونية */
+        .main-container {
+            max-width: 980px;
             margin: -30px auto 60px;
-            padding: 0 20px;
+            padding: 0 18px;
         }
 
-        .card {
-            background: var(--card-bg);
-            border-radius: 24px;
+        .document-sheet {
+            background: var(--white);
+            border-radius: 18px;
             padding: 45px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
-            border: 1px solid var(--border);
+            box-shadow: 0 12px 32px rgba(18, 98, 122, 0.08);
+            border: 1px solid var(--border-color);
         }
 
-        /* Summary Highlights */
-        .highlight-grid {
+        /* جدول البيانات التعريفية الرسمي (مهم جداً للذكاء الاصطناعي في جوجل) */
+        .meta-banner {
+            background: var(--accent-soft);
+            border: 1px solid var(--accent);
+            border-left: 6px solid var(--primary);
+            border-radius: 12px;
+            padding: 18px 22px;
+            margin-bottom: 35px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+        }
+
+        .meta-item {
+            font-size: 14px;
+        }
+
+        .meta-item span {
+            display: block;
+            font-size: 12px;
+            text-transform: uppercase;
+            color: var(--secondary);
+            font-weight: 700;
+            letter-spacing: 0.4px;
+        }
+
+        .meta-item strong {
+            color: var(--primary-deep);
+            font-size: 14.5px;
+            font-weight: 700;
+        }
+
+        /* بطاقات الملخص السريع */
+        .summary-cards {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
             gap: 16px;
-            margin-bottom: 40px;
+            margin-bottom: 38px;
         }
 
-        .highlight-item {
-            background: var(--primary-light);
-            border: 1px solid #DBEAFE;
+        .summary-card {
+            background: #FAFCFD;
+            border: 1.5px solid #D5E3E8;
+            border-top: 4px solid var(--primary);
             padding: 18px;
-            border-radius: 16px;
+            border-radius: 12px;
         }
 
-        .highlight-item strong {
+        .summary-card strong {
             display: block;
-            color: var(--primary);
-            font-size: 15px;
+            color: var(--primary-deep);
+            font-size: 16px;
+            font-weight: 800;
             margin-bottom: 6px;
         }
 
-        .highlight-item p {
+        .summary-card p {
             margin: 0;
-            font-size: 13px;
-            color: var(--text-muted);
-            line-height: 1.55;
+            font-size: 14px;
+            color: var(--text-medium);
+            line-height: 1.6;
+            font-weight: 500;
         }
 
-        /* Table of Contents */
-        .toc-box {
-            background: #F8FAFC;
-            padding: 22px 26px;
-            border-radius: 16px;
+        /* فهرس المحتويات */
+        .toc-container {
+            background: var(--bg-light);
+            padding: 22px 28px;
+            border-radius: 12px;
             margin-bottom: 40px;
-            border: 1px solid var(--border);
-            border-left: 5px solid var(--accent);
+            border: 1px solid var(--border-color);
         }
 
-        .ar .toc-box {
-            border-left: 1px solid var(--border);
-            border-right: 5px solid var(--accent);
+        .toc-container h3 {
+            margin: 0 0 14px;
+            font-size: 17px;
+            color: var(--primary-deep);
+            font-weight: 800;
         }
 
-        .toc-box h3 {
-            margin: 0 0 12px;
-            font-size: 16px;
-            color: var(--primary);
-        }
-
-        .toc-grid {
+        .toc-list {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 8px 20px;
+            gap: 8px 24px;
             margin: 0;
-            padding-left: 18px;
+            padding-left: 20px;
         }
 
-        .ar .toc-grid {
+        .ar-block .toc-list {
             padding-left: 0;
-            padding-right: 18px;
+            padding-right: 20px;
         }
 
-        .toc-grid li {
-            font-size: 13.5px;
+        .toc-list li {
+            font-size: 14.5px;
             margin-bottom: 4px;
-        }
-
-        .toc-grid a {
-            color: var(--accent);
-            text-decoration: none;
             font-weight: 600;
         }
 
-        .toc-grid a:hover {
+        .toc-list a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .toc-list a:hover {
+            color: var(--primary-deep);
             text-decoration: underline;
         }
 
-        /* Sections */
+        /* تنسيق الأقسام والفقرات */
         section {
-            margin-bottom: 38px;
-            padding-bottom: 30px;
-            border-bottom: 1px solid var(--border);
+            margin-bottom: 36px;
+            padding-bottom: 28px;
+            border-bottom: 1px solid #E2E8F0;
         }
 
         section:last-of-type {
@@ -223,100 +282,153 @@
         }
 
         h2 {
-            font-size: 20px;
-            color: var(--primary);
+            font-size: 21px;
+            font-weight: 800;
+            color: var(--primary-deep);
             margin-top: 0;
             margin-bottom: 14px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--accent-soft);
         }
 
         h3 {
-            font-size: 16px;
-            color: var(--text-main);
-            margin: 18px 0 8px;
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--secondary);
+            margin: 20px 0 10px;
         }
 
         p, li {
-            font-size: 14.5px;
-            color: var(--text-body);
+            font-size: 15.5px;
+            color: var(--text-medium);
+            font-weight: 500;
             margin: 0 0 12px;
         }
 
         ul {
-            margin-top: 6px;
+            margin-top: 8px;
             margin-bottom: 16px;
         }
 
-        /* Data & Permissions Table */
-        .data-table {
+        li {
+            margin-bottom: 8px;
+        }
+
+        code {
+            background: var(--accent-soft);
+            color: var(--primary-deep);
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 700;
+            font-family: Consolas, Monaco, monospace;
+        }
+
+        a {
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        /* الجداول الرسمية */
+        .policy-table {
             width: 100%;
             border-collapse: collapse;
-            margin: 18px 0;
-            font-size: 13.5px;
-            border-radius: 12px;
+            margin: 20px 0;
+            font-size: 14.5px;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
             overflow: hidden;
-            border: 1px solid var(--border);
         }
 
-        .data-table th {
+        .policy-table th {
             background: var(--primary);
-            color: white;
+            color: var(--white);
             text-align: inherit;
-            padding: 12px 15px;
-            font-weight: 600;
+            padding: 14px 16px;
+            font-weight: 700;
+            font-size: 15px;
         }
 
-        .data-table td {
-            padding: 12px 15px;
-            border-bottom: 1px solid var(--border);
-            color: var(--text-body);
+        .policy-table td {
+            padding: 14px 16px;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-dark);
+            font-weight: 500;
             vertical-align: top;
         }
 
-        .data-table tr:nth-child(even) {
-            background: #F8FAFC;
+        .policy-table tr:nth-child(even) {
+            background: var(--bg-light);
         }
 
-        .notice-box {
-            background: var(--success-bg);
-            border: 1px solid var(--success-border);
-            color: var(--success-text);
-            padding: 16px 20px;
-            border-radius: 14px;
-            margin: 18px 0;
-            font-size: 13.5px;
+        /* صندوق التنبيه الرسمي */
+        .guarantee-box {
+            background: var(--accent-soft);
+            border: 1.5px solid var(--primary-light);
+            border-left: 6px solid var(--primary);
+            color: var(--primary-deep);
+            padding: 18px 22px;
+            border-radius: 10px;
+            margin: 20px 0;
+            font-size: 15px;
+            font-weight: 600;
         }
 
-        .ar {
+        .ar-block .guarantee-box {
+            border-left: 1.5px solid var(--primary-light);
+            border-right: 6px solid var(--primary);
+        }
+
+        /* تخصيص الاتجاه والخط للقسم العربي */
+        .ar-block {
             direction: rtl;
             text-align: right;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        .ar-block p, .ar-block li, .ar-block td {
+            font-size: 16px;
+            line-height: 1.95;
+        }
+
+        .en-block {
+            direction: ltr;
+            text-align: left;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .divider-both {
+            margin: 50px 0;
+            border: none;
+            border-top: 3px dashed var(--accent);
+        }
+
+        .hidden-section {
             display: none;
         }
 
-        .en {
-            direction: ltr;
-            text-align: left;
-        }
-
         footer {
+            background: var(--bg-dark);
+            color: #CBD5E1;
             text-align: center;
-            padding: 30px 20px;
-            color: var(--text-muted);
-            font-size: 13px;
-            border-top: 1px solid var(--border);
-            background: white;
+            padding: 32px 20px;
+            font-size: 14px;
+            font-family: 'Cairo', 'Inter', sans-serif;
+            border-top: 4px solid var(--primary);
         }
 
-        @media (max-width: 650px) {
-            .card {
-                padding: 25px 18px;
+        footer strong {
+            color: var(--white);
+        }
+
+        @media (max-width: 680px) {
+            .document-sheet {
+                padding: 24px 16px;
             }
             header h1 {
-                font-size: 22px;
+                font-size: 24px;
             }
-            .data-table {
+            .policy-table {
                 display: block;
                 overflow-x: auto;
             }
@@ -326,368 +438,399 @@
 <body>
 
 <header>
-    <div class="logo-wrap">
-        <img src="logo.png" alt="Sira CV Logo" onerror="this.src='https://cdn-icons-png.flaticon.com/512/942/942799.png'">
+    <div class="logo-container">
+        <img src="logo.png" alt="Sira CV Official Logo" onerror="this.src='https://cdn-icons-png.flaticon.com/512/942/942799.png'">
     </div>
     <h1>Sira CV • تطبيق سيرة</h1>
-    <p id="app-subtitle">Comprehensive Privacy Policy, Data Safety & Terms of Service</p>
-    <div class="badge-version">Effective Date: October 28, 2026 • Version 1.0</div>
+    <p class="subtitle" id="header-subtitle">Official Privacy Policy, Google Play Data Safety & Terms of Service</p>
     
-    <div class="controls-bar">
-        <button class="lang-btn active" onclick="switchLang('en')">English (Official)</button>
-        <button class="lang-btn" onclick="switchLang('ar')">العربية (الرسمية)</button>
+    <div class="lang-controls">
+        <button class="lang-btn active" id="btn-both" onclick="setLanguageView('both')">🌐 Bilingual View (العربية + English)</button>
+        <button class="lang-btn" id="btn-ar" onclick="setLanguageView('ar')">العربية فقط</button>
+        <button class="lang-btn" id="btn-en" onclick="setLanguageView('en')">English Only</button>
     </div>
 </header>
 
-<div class="wrapper">
-    <div class="card">
-        
-        <!-- ================= ENGLISH CONTENT ================= -->
-        <div id="en-content" class="en">
-            
-            <div class="highlight-grid">
-                <div class="highlight-item">
-                    <strong>🔒 Offline-First Architecture</strong>
-                    <p>100% of your personal CV details and photos are saved locally in your device's SQLite database.</p>
-                </div>
-                <div class="highlight-item">
-                    <strong>🚫 Zero Personal Data Selling</strong>
-                    <p>We never upload, read, rent, or sell your resume information to any third party or server.</p>
-                </div>
-                <div class="highlight-item">
-                    <strong>📷 On-Device Media Access</strong>
-                    <p>Photos selected for your CV profile are processed strictly inside your phone's memory.</p>
-                </div>
-                <div class="highlight-item">
-                    <strong>📢 Compliant Ad Network</strong>
-                    <p>Partnered with Start.io to serve non-intrusive ads using standard anonymous identifiers.</p>
-                </div>
+<main class="main-container">
+    <div class="document-sheet">
+
+        <!-- شريط البيانات التعريفية الرسمي لفاحص جوجل بلاي -->
+        <div class="meta-banner">
+            <div class="meta-item">
+                <span>Application Name</span>
+                <strong>Sira CV (سيرة CV)</strong>
             </div>
-
-            <div class="toc-box">
-                <h3>Quick Navigation (Table of Contents)</h3>
-                <ol class="toc-grid">
-                    <li><a href="#en-1">Introduction & Scope</a></li>
-                    <li><a href="#en-2">Information We Collect & Store</a></li>
-                    <li><a href="#en-3">Device Permissions Explained</a></li>
-                    <li><a href="#en-4">Third-Party SDKs & Advertising</a></li>
-                    <li><a href="#en-5">Data Retention & Deletion Policy</a></li>
-                    <li><a href="#en-6">Data Security Measures</a></li>
-                    <li><a href="#en-7">Children's Privacy (COPPA)</a></li>
-                    <li><a href="#en-8">International Rights (GDPR & CCPA)</a></li>
-                    <li><a href="#en-9">Terms of Use & Intellectual Property</a></li>
-                    <li><a href="#en-10">Changes & Contact Information</a></li>
-                </ol>
+            <div class="meta-item">
+                <span>Developer / Entity</span>
+                <strong>Amran Al-Gaafari (عمران الجعفري)</strong>
             </div>
-
-            <section id="en-1">
-                <h2>1. Introduction & Scope</h2>
-                <p>Welcome to <strong>Sira CV</strong> ("we," "our," or "us"). This Privacy Policy and Terms of Service document governs your use of the Sira CV mobile application (Package Name: <code>com.amran.sira_cv</code>) available on the Google Play Store. We are committed to protecting your privacy and ensuring full transparency regarding how information is handled inside our application.</p>
-                <p>By installing, accessing, or using Sira CV, you signify that you have read, understood, and agreed to the practices described in this policy.</p>
-            </section>
-
-            <section id="en-2">
-                <h2>2. Information We Collect & Store</h2>
-                <h3>2.1 User-Provided Resume Information (Stored Locally Only)</h3>
-                <p>When you create or edit a Curriculum Vitae (CV) within Sira CV, you voluntarily input career and personal information such as:</p>
-                <ul>
-                    <li>Full name, job title, and professional summary (Bio).</li>
-                    <li>Contact details (phone number, email address, city/country).</li>
-                    <li>Optional profile photograph selected from your device.</li>
-                    <li>Educational history, work experiences, skills, languages, and custom sections.</li>
-                </ul>
-                <div class="notice-box">
-                    <strong>Crucial Privacy Guarantee:</strong> All information listed above is stored exclusively on your local mobile device using an internal SQLite database and local file storage. We do not operate any cloud servers, and this personal data is never transmitted outside your device.
-                </div>
-
-                <h3>2.2 Automatically Collected Technical Data (Third-Party Ads)</h3>
-                <p>While the core app functions offline, when your device is connected to the internet, our integrated third-party advertising partner (<strong>Start.io</strong>) may automatically collect certain non-personally identifiable technical data to display relevant advertisements and prevent fraud.</p>
-            </section>
-
-            <section id="en-3">
-                <h2>3. Device Permissions Explained</h2>
-                <p>To deliver a seamless CV creation and PDF export experience, Sira CV requests minimal system permissions:</p>
-                <table class="data-table">
-                    <thead>
-                        <tr>
-                            <th>Permission / Feature</th>
-                            <th>Purpose & Usage</th>
-                            <th>Data Shared Externally?</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Photo Gallery / MediaPicker</strong><br><code>image_picker</code></td>
-                            <td>Allows you to optionally pick a personal photo from your gallery to embed into your PDF resume.</td>
-                            <td><strong>No.</strong> Processed 100% locally on your device.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Storage / Printing</strong><br><code>printing & pdf</code></td>
-                            <td>Used to generate, preview, save, and share your final PDF curriculum vitae documents.</td>
-                            <td><strong>No.</strong> Controlled entirely by the user.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Internet & Network State</strong><br><code>INTERNET / ACCESS_NETWORK_STATE</code></td>
-                            <td>Required solely to load banner and interstitial advertisements via Start.io when online.</td>
-                            <td><strong>Yes</strong> (Technical Ad IDs only via Start.io SDK).</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Advertising ID</strong><br><code>AD_ID</code></td>
-                            <td>Used by Start.io SDK to serve compliant ads and measure ad impressions.</td>
-                            <td><strong>Yes</strong> (Managed by Google Play Services & Start.io).</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-
-            <section id="en-4">
-                <h2>4. Third-Party SDKs & Advertising Policy</h2>
-                <p>Sira CV is offered free of charge. To sustain development and updates, we integrate the <strong>Start.io (formerly StartApp) Advertising SDK</strong> to show non-intrusive banner and interstitial ads.</p>
-                <p>When an ad is requested, Start.io may collect and process:</p>
-                <ul>
-                    <li><strong>Device & Advertising Identifiers:</strong> Google Advertising ID (GAID), device manufacturer, model, and operating system version.</li>
-                    <li><strong>Network & Connection Data:</strong> IP address (used for approximate country/city-level geo-targeting), mobile carrier, and network connection type.</li>
-                    <li><strong>Ad Interaction Metrics:</strong> Ad views, clicks, and diagnostic crash logs related to ad rendering.</li>
-                </ul>
-                <p>We configure our ads strictly to respect user experience: ads do not block core navigation buttons, and blank ad containers automatically collapse when offline. You can review Start.io's complete data practices at: <a href="https://www.start.io/policy/privacy-policy/" target="_blank" rel="noopener">https://www.start.io/policy/privacy-policy/</a>.</p>
-            </section>
-
-            <section id="en-5">
-                <h2>5. Data Retention & Deletion Policy</h2>
-                <p>Because Sira CV does not store your personal resume data on external servers, <strong>you have 100% direct control over your data retention and deletion</strong> at any moment:</p>
-                <ul>
-                    <li><strong>Deleting Specific Items or Resumes:</strong> You can delete any individual section item, photo, or entire CV directly from the app's Home Screen using the delete button. This permanently erases the record from the local SQLite database.</li>
-                    <li><strong>Complete Data Wipe:</strong> Clearing the app's storage from your Android Settings (<code>Settings &gt; Apps &gt; Sira CV &gt; Storage &gt; Clear Data</code>) or uninstalling the application immediately and irreversibly destroys all locally saved resumes and preferences.</li>
-                    <li><strong>Resetting Advertising ID:</strong> You can reset or delete your Google Advertising ID at any time via your Android device settings (<code>Settings &gt; Google &gt; Ads &gt; Delete advertising ID</code>).</li>
-                </ul>
-            </section>
-
-            <section id="en-6">
-                <h2>6. Data Security Measures</h2>
-                <p>We prioritize the security of your information by eliminating cloud transmission risks for your CV documents. All resume content stays within Android's secure application sandbox. Additionally, all network requests made by the Start.io SDK are encrypted in transit using industry-standard HTTPS/TLS protocols. We recommend securing your mobile phone with a passcode or biometric lock to prevent unauthorized physical access to your exported PDF files.</p>
-            </section>
-
-            <section id="en-7">
-                <h2>7. Children's Privacy (COPPA Compliance)</h2>
-                <p>Sira CV is a professional career utility intended for job seekers and general audiences aged 13 and older. We do not knowingly target, solicit, or collect personal information from children under the age of 13. If you are a parent or guardian and believe a child has entered personal information into a device using our app, you can immediately remove it by uninstalling the app or deleting the resume entry inside the application.</p>
-            </section>
-
-            <section id="en-8">
-                <h2>8. International Privacy Rights (GDPR & CCPA)</h2>
-                <p>Depending on your location (including the European Economic Area under GDPR or California under CCPA), you have specific rights regarding your data:</p>
-                <ul>
-                    <li><strong>Right to Access, Rectify, and Erase:</strong> Since all CV data is stored locally on your device, you can view, edit, export, or permanently delete your data instantaneously within the app without needing to submit a request.</li>
-                    <li><strong>Opt-Out of Personalized Advertising:</strong> You may opt out of interest-based advertising at any time by navigating to your Android device's <code>Settings &gt; Google &gt; Ads</code> and enabling "Opt out of Ads Personalization" or deleting your Advertising ID.</li>
-                </ul>
-            </section>
-
-            <section id="en-9">
-                <h2>9. Terms of Use & Intellectual Property</h2>
-                <h3>9.1 Acceptable Use & User Responsibility</h3>
-                <p>Sira CV is a formatting and design tool. You are solely responsible for the truthfulness, accuracy, and legality of the data you include in your resumes. We make no warranties or guarantees regarding job placement, interview invitations, or employment outcomes.</p>
-                <h3>9.2 Ownership & Copyright</h3>
-                <p>The Sira CV application software, source code, UI design, logo, and custom template layouts are the intellectual property of the developer (Amran Al-Gaafari). However, <strong>you retain full ownership and copyright over the personal content and final PDF resumes you generate</strong> using the app, and you are free to use, print, and distribute your exported PDFs for any personal or professional purpose.</p>
-            </section>
-
-            <section id="en-10">
-                <h2>10. Changes to This Policy & Contact Us</h2>
-                <p>We may update this Privacy Policy and Terms of Service periodically to reflect new app features, regulatory requirements, or Google Play policy updates. Any changes will be posted on this page with an updated revision date.</p>
-                <p>If you have any questions, concerns, or feedback regarding this Privacy Policy or our practices, please contact the developer:</p>
-                <ul>
-                    <li><strong>Developer:</strong> Amran Al-Gaafari</li>
-                    <li><strong>GitHub Profile:</strong> <a href="https://github.com/amran29" target="_blank">https://github.com/amran29</a></li>
-                    <li><strong>Application:</strong> Sira CV (سيرة CV)</li>
-                </ul>
-            </section>
-
+            <div class="meta-item">
+                <span>Data Storage Model</span>
+                <strong>100% Local (Offline-First SQLite)</strong>
+            </div>
+            <div class="meta-item">
+                <span>Effective & Updated Date</span>
+                <strong>October 28, 2026</strong>
+            </div>
         </div>
 
-        <!-- ================= ARABIC CONTENT ================= -->
-        <div id="ar-content" class="ar">
+        <!-- ================= النسخة العربية الرسمية ================= -->
+        <article id="ar-section" class="ar-block" lang="ar">
             
-            <div class="highlight-grid">
-                <div class="highlight-item">
-                    <strong>🔒 معمارية الحفظ المحلي</strong>
-                    <p>100% من بيانات سيرتك الذاتية وصورك تُحفظ محلياً داخل قاعدة بيانات هاتفك فقط.</p>
+            <div class="summary-cards">
+                <div class="summary-card">
+                    <strong>🔒 حفظ محلي بالكامل</strong>
+                    <p>جميع بيانات سيرتك الذاتية وصورك تُحفظ حصرياً داخل ذاكرة هاتفك ولا تُرفع لأي خادم سحابي.</p>
                 </div>
-                <div class="highlight-item">
-                    <strong>🚫 لا نبيع أو نرفع بياناتك</strong>
-                    <p>لا نمتلك خوادم سحابية لرفع أو قراءة أو مشاركة محتوى سيرتك الذاتية مع أي طرف.</p>
+                <div class="summary-card">
+                    <strong>🛡️ خصوصية مطلقة</strong>
+                    <p>لا نطلب إنشاء حساب، ولا نطلع على بياناتك الشخصية أو نشاركها أو نبيعها لأي جهة خارجية.</p>
                 </div>
-                <div class="highlight-item">
-                    <strong>📷 معالجة الصور داخل الجهاز</strong>
-                    <p>الصورة الشخصية التي تختارها للسيرة الذاتية تتم معالجتها ودمجها في الـ PDF داخل ذاكرة هاتفك.</p>
+                <div class="summary-card">
+                    <strong>📷 معالجة محلية للصور</strong>
+                    <p>الصورة الشخصية المختارة للسيرة الذاتية تتم معالجتها ودمجها بملف الـ PDF داخل هاتفك فقط.</p>
                 </div>
-                <div class="highlight-item">
-                    <strong>📢 إعلانات متوافقة مع السياسات</strong>
-                    <p>نستخدم شبكة Start.io لعرض إعلانات غير مزعجة باستخدام معرفات تقنية قياسية غير شخصية.</p>
+                <div class="summary-card">
+                    <strong>📢 إعلانات متوافقة</strong>
+                    <p>نستخدم شبكة Start.io المعتمدة لعرض إعلانات غير مزعجة باستخدام معرفات تقنية غير شخصية.</p>
                 </div>
             </div>
 
-            <div class="toc-box">
-                <h3>فهرس المحتويات السريع</h3>
-                <ol class="toc-grid">
+            <div class="toc-container">
+                <h3>فهرس البنود القانونية (سياسة الخصوصية وشروط الاستخدام)</h3>
+                <ol class="toc-list">
                     <li><a href="#ar-1">مقدمة ونطاق السياسة</a></li>
-                    <li><a href="#ar-2">البيانات التي نجمعها ونخزنها</a></li>
-                    <li><a href="#ar-3">توضيح أذونات الجهاز المطلوبة</a></li>
-                    <li><a href="#ar-4">الشبكات الإعلانية والأطراف الثالثة</a></li>
-                    <li><a href="#ar-5">سياسة الاحتفاظ بالبيانات وحذفها</a></li>
+                    <li><a href="#ar-2">البيانات التي نجمعها وطريقة تخزينها</a></li>
+                    <li><a href="#ar-3">تفصيل أذونات الجهاز المطلوبة</a></li>
+                    <li><a href="#ar-4">الشبكات الإعلانية والأطراف الثالثة (Start.io)</a></li>
+                    <li><a href="#ar-5">سياسة الاحتفاظ بالبيانات وحذفها الفوري</a></li>
                     <li><a href="#ar-6">إجراءات أمن وحماية المعلومات</a></li>
                     <li><a href="#ar-7">خصوصية الأطفال (COPPA)</a></li>
-                    <li><a href="#ar-8">حقوق المستخدم والتحكم بالإعلانات</a></li>
-                    <li><a href="#ar-9">شروط الاستخدام والملكية الفكرية</a></li>
-                    <li><a href="#ar-10">التعديلات وبيانات التواصل</a></li>
+                    <li><a href="#ar-8">حقوق المستخدم والتحكم بالإعلانات (GDPR/CCPA)</a></li>
+                    <li><a href="#ar-9">شروط الاستخدام وحقوق الملكية الفكرية</a></li>
+                    <li><a href="#ar-10">التحديثات وبيانات التواصل الرسمية</a></li>
                 </ol>
             </div>
 
             <section id="ar-1">
                 <h2>1. مقدمة ونطاق السياسة</h2>
-                <p>مرحباً بك في تطبيق <strong>سيرة CV (Sira CV)</strong>. تنظم وثيقة "سياسة الخصوصية وشروط الاستخدام" هذه استخدامك لتطبيق الهاتف المحمول "سيرة CV" المتاح عبر متجر Google Play. نحن نلتزم التزاماً كاملاً بحماية خصوصيتك وتوضيح آلية التعامل مع البيانات داخل التطبيق بشفافية مطلقة.</p>
-                <p>إن قيامك بتثبيت التطبيق أو فتحه أو استخدامه يعني قراءتك وموافقتك الكاملة على البنود الموضحة في هذه الوثيقة.</p>
+                <p>مرحباً بك في تطبيق <strong>سيرة CV (Sira CV)</strong>. توضح هذه الوثيقة الرسمية سياسة الخصوصية وأمان البيانات وشروط الاستخدام الخاصة بتطبيق الهاتف المحمول "سيرة CV" المتاح على متجر Google Play. تم إعداد هذه الوثيقة بما يتوافق تماماً مع سياسات برنامج مطوري Google Play ومتطلبات أمان البيانات (Data Safety).</p>
+                <p>إن قيامك بتثبيت التطبيق أو الوصول إليه أو استخدام أي من خدماته يعد موافقة صريحة منك على الممارسات والشروط الموضحة في هذه الوثيقة.</p>
             </section>
 
             <section id="ar-2">
-                <h2>2. البيانات التي نجمعها ونخزنها</h2>
-                <h3>2.1 بيانات السيرة الذاتية التي يدخلها المستخدم (تُخزن محلياً فقط)</h3>
-                <p>عند إنشاء أو تعديل سيرة ذاتية داخل التطبيق، فإنك تقوم بإدخال بياناتك المهنية والشخصية طواعيةً، وتشمل:</p>
+                <h2>2. البيانات التي نجمعها وطريقة تخزينها</h2>
+                <h3>2.1 بيانات السيرة الذاتية التي يدخلها المستخدم (تخزين محلي فقط)</h3>
+                <p>عند قيامك بإنشاء أو تحرير سيرة ذاتية داخل التطبيق، فإنك تقوم بإدخال بياناتك المهنية والشخصية طواعيةً، وتشمل:</p>
                 <ul>
-                    <li>الاسم الكامل، المسمى الوظيفي، والنبذة التعريفية (Bio).</li>
-                    <li>معلومات الاتصال (رقم الهاتف، البريد الإلكتروني، المدينة/الدولة).</li>
-                    <li>الصورة الشخصية الاختيارية التي تختارها من معرض صور هاتفك.</li>
-                    <li>المؤهلات العلمية، الخبرات الوظيفية، المهارات، اللغات، والأقسام المخصصة.</li>
+                    <li>الاسم الكامل، المسمى الوظيفي، والنبذة المهنية (Bio).</li>
+                    <li>بيانات التواصل (رقم الهاتف، البريد الإلكتروني، والمدينة/الدولة).</li>
+                    <li>الصورة الشخصية الاختيارية التي تختارها من معرض جهازك.</li>
+                    <li>المؤهلات الأكاديمية، الخبرات العملية، المهارات، اللغات، والأقسام المخصصة.</li>
                 </ul>
-                <div class="notice-box">
-                    <strong>ضمان الخصوصية الأساسي:</strong> جميع البيانات المذكورة أعلاه تُحفظ حصرياً داخل ذاكرة هاتفك الشخصي في قاعدة بيانات محلية (SQLite). نحن لا ندير أي خوادم خارجية، ولا يتم إرسال أو رفع بيانات سيرتك الذاتية إلى الإنترنت مطلقاً.
+                <div class="guarantee-box">
+                    <strong>تعهد الخصوصية الأساسي:</strong> جميع البيانات والملفات المذكورة أعلاه تُخزن محلياً بنسبة 100% داخل ذاكرة هاتفك في قاعدة بيانات معزولة (SQLite). لا يمتلك التطبيق أي خوادم خارجية (Backend Servers)، ولا يتم نقل أو نسخ أو رفع بيانات سيرتك الذاتية عبر الإنترنت تحت أي ظرف.
                 </div>
 
                 <h3>2.2 البيانات التقنية التي تُجمع تلقائياً (لأغراض الإعلانات)</h3>
-                <p>بينما يعمل التطبيق الأساسي بدون إنترنت، فإنه عند اتصال هاتفك بالإنترنت، قد تقوم حزمة الإعلانات التابعة لطرف ثالث (<strong>Start.io</strong>) بجمع بيانات تقنية غير محددة للهوية الشخصية تلقائياً بهدف عرض إعلانات ملائمة ومنع الاحتيال الإعلاني.</p>
+                <p>يعمل التطبيق الأساسي دون الحاجة للاتصال بالإنترنت. ومع ذلك، عند اتصال جهازك بالإنترنت، تقوم حزمة الإعلانات المدمجة التابعة لطرف ثالث (<strong>Start.io SDK</strong>) بجمع بيانات تقنية غير محددة للهوية الشخصية تلقائياً لتقديم الإعلانات ومنع الاحتيال.</p>
             </section>
 
             <section id="ar-3">
-                <h2>3. توضيح أذونات الجهاز المطلوبة</h2>
-                <p>لتقديم تجربة متكاملة في تصميم السيرة الذاتية وتصدير ملفات PDF، يطلب التطبيق الحد الأدنى من الأذونات الضرورية فقط:</p>
-                <table class="data-table">
+                <h2>3. تفصيل أذونات الجهاز المطلوبة</h2>
+                <p>يطلب تطبيق "سيرة CV" الحد الأدنى من الأذونات التقنية الضرورية لتشغيل ميزاته الأساسية كما هو موضح في الجدول التالي:</p>
+                <table class="policy-table">
                     <thead>
                         <tr>
-                            <th>الإذن / الميزة</th>
-                            <th>الغرض وكيفية الاستخدام</th>
-                            <th>هل تُشارك خارج الجهاز؟</th>
+                            <th>الإذن / الحزمة البرمجية</th>
+                            <th>الغرض التقني وكيفية الاستخدام</th>
+                            <th>هل تُشارك البيانات خارج الجهاز؟</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>معرض الصور (Gallery)</strong><br><code>image_picker</code></td>
-                            <td>يتيح لك اختيار صورة شخصية من جهازك لإدراجها في قالب السيرة الذاتية (اختياري).</td>
-                            <td><strong>لا.</strong> تُعالج محلياً 100% داخل الجهاز.</td>
+                            <td><strong>منتقي الصور (Photo Picker)</strong><br><code>image_picker</code></td>
+                            <td>يتيح للمستخدم اختيار صورة شخصية من المعرض لدمجها داخل قالب السيرة الذاتية (اختياري تماماً).</td>
+                            <td><strong>لا.</strong> تُعالج الصورة محلياً داخل ذاكرة الهاتف فقط.</td>
                         </tr>
                         <tr>
-                            <td><strong>التخزين والطباعة (PDF)</strong><br><code>printing & pdf</code></td>
-                            <td>يُستخدم لتوليد ومعاينة وحفظ ومشاركة ملف السيرة الذاتية بصيغة PDF.</td>
-                            <td><strong>لا.</strong> يتم التحكم بالملف بواسطة المستخدم فقط.</td>
+                            <td><strong>توليد وحفظ ومشاركة PDF</strong><br><code>pdf &amp; printing</code></td>
+                            <td>يُستخدم لتحويل بيانات السيرة الذاتية إلى ملف PDF جاهز للطباعة أو الحفظ على الهاتف.</td>
+                            <td><strong>لا.</strong> الملف الناتج يخضع لسيطرة المستخدم وحده.</td>
                         </tr>
                         <tr>
-                            <td><strong>الاتصال بالإنترنت والشبكة</strong><br><code>INTERNET / ACCESS_NETWORK_STATE</code></td>
-                            <td>يُستخدم فقط لتحميل وعرض الإعلانات البينية وإعلانات البانر عبر Start.io عند توفر اتصال.</td>
-                            <td><strong>نعم</strong> (بيانات تقنية ومعرّف الإعلانات فقط).</td>
+                            <td><strong>الاتصال بالإنترنت وحالة الشبكة</strong><br><code>INTERNET / ACCESS_NETWORK_STATE</code></td>
+                            <td>يُستخدم فقط لجلب وعرض الإعلانات عبر شبكة Start.io عند توفر اتصال بالإنترنت.</td>
+                            <td><strong>نعم</strong> (بيانات تقنية ومعرّف الإعلانات فقط عبر Start.io).</td>
                         </tr>
                         <tr>
-                            <td><strong>معرّف الإعلانات</strong><br><code>AD_ID</code></td>
-                            <td>يُستخدم بواسطة شبكة Start.io لعرض إعلانات متوافقة مع سياسات جوجل وقياس أدائها.</td>
-                            <td><strong>نعم</strong> (يُدار عبر خدمات Google Play وStart.io).</td>
+                            <td><strong>معرّف الإعلانات</strong><br><code>com.google.android.gms.permission.AD_ID</code></td>
+                            <td>يُستخدم بواسطة شبكة Start.io لعرض إعلانات متوافقة مع سياسات Google Play وقياس الأداء.</td>
+                            <td><strong>نعم</strong> (تُعالج بواسطة خدمات Google Play وStart.io).</td>
                         </tr>
                     </tbody>
                 </table>
             </section>
 
             <section id="ar-4">
-                <h2>4. الشبكات الإعلانية والأطراف الثالثة</h2>
-                <p>يتوفر تطبيق "سيرة CV" مجاناً بالكامل لجميع المستخدمين. ولدعم استمرارية تطوير التطبيق وتحديث قوالبه، يعتمد التطبيق على حزمة إعلانات <strong>Start.io (StartApp SDK)</strong> لعرض شريط إعلاني سفلي وإعلانات بينية عند الانتقال بين المراحل.</p>
-                <p>عند طلب الإعلان، قد تعالج شبكة Start.io البيانات التقنية التالية:</p>
+                <h2>4. الشبكات الإعلانية والأطراف الثالثة (Start.io)</h2>
+                <p>لتوفير تطبيق "سيرة CV" وكافة قوالبه مجاناً للمستخدمين، نعتمد على شبكة الإعلانات العالمية <strong>Start.io (المعروفة سابقاً باسم StartApp)</strong> لعرض إعلانات بانر سفلية وإعلانات بينية.</p>
+                <p>عند اتصال التطبيق بالإنترنت لطلب إعلان، قد تقوم شبكة Start.io بجمع ومعالجة البيانات التقنية التالية:</p>
                 <ul>
-                    <li><strong>معرفات الجهاز والإعلانات:</strong> معرّف إعلانات جوجل (Google Advertising ID)، طراز الهاتف، الشركة المصنعة، وإصدار نظام أندرويد.</li>
-                    <li><strong>بيانات الشبكة والاتصال:</strong> عنوان البروتوكول (IP) لتحديد الموقع الجغرافي التقريبي على مستوى الدولة/المدينة، ونوع الاتصال بالشبكة.</li>
-                    <li><strong>مقاييس التفاعل مع الإعلان:</strong> عدد مرات ظهور الإعلان والنقرات لتشخيص الأخطاء وتحسين جودة الإعلانات.</li>
+                    <li><strong>المعرفات التقنية:</strong> معرّف إعلانات جوجل (Google Advertising ID)، طراز الجهاز، الشركة المصنعة، وإصدار نظام التشغيل Android.</li>
+                    <li><strong>معلومات الشبكة:</strong> عنوان بروتوكول الإنترنت (IP Address) لتقدير الموقع الجغرافي العام (الدولة/المدينة)، اسم مزود الخدمة، ونوع الاتصال.</li>
+                    <li><strong>بيانات أداء الإعلانات:</strong> مرات ظهور الإعلان، النقرات، وسجلات التشخيص التقنية الخاصة بعرض الإعلان.</li>
                 </ul>
-                <p>لقد صممنا نظام الإعلانات في التطبيق ليحترم تجربة المستخدم؛ فلا تغطي الإعلانات على أزرار التنقل، وتختفي مساحتها تماماً عند انقطاع الإنترنت. للاطلاع على التفاصيل الكاملة لسياسة خصوصية المزود الإعلاني، يرجى زيارة: <a href="https://www.start.io/policy/privacy-policy/" target="_blank" rel="noopener">سياسة خصوصية Start.io</a>.</p>
+                <p>للاطلاع على سياسة الخصوصية الرسمية لشركة Start.io وكيفية تعاملها مع البيانات، يرجى زيارة الرابط الرسمي: <a href="https://www.start.io/policy/privacy-policy/" target="_blank" rel="noopener">https://www.start.io/policy/privacy-policy/</a>.</p>
             </section>
 
             <section id="ar-5">
-                <h2>5. سياسة الاحتفاظ بالبيانات وحذفها</h2>
-                <p>بما أن التطبيق لا يخزن سيرك الذاتية على خوادم خارجية، فإن <strong>لديك سيطرة كاملة وفورية بنسبة 100% على بياناتك وحذفها</strong> في أي وقت:</p>
+                <h2>5. سياسة الاحتفاظ بالبيانات وحذفها الفوري</h2>
+                <p>نظراً لعدم وجود حسابات مستخدمين أو خوادم سحابية لدينا، فإن <strong>المستخدم يمتلك السيطرة الكاملة والفورية على بياناته</strong>:</p>
                 <ul>
-                    <li><strong>حذف عنصر أو سيرة ذاتية:</strong> يمكنك حذف أي مهارة، خبرة، صورة شخصية، أو سيرة ذاتية كاملة مباشرة من الشاشة الرئيسية للتطبيق بضغطة زر، مما يؤدي إلى مسحها نهائياً من قاعدة البيانات المحلية.</li>
-                    <li><strong>المسح الشامل للبيانات:</strong> يمكنك مسح كافة بيانات التطبيق من إعدادات هاتفك (<code>الإعدادات &gt; التطبيقات &gt; سيرة CV &gt; مكان التخزين &gt; مسح البيانات</code>) أو إلغاء تثبيت التطبيق، مما يتلف جميع السجلات المحفوظة محلياً فوراً ودون رجعة.</li>
-                    <li><strong>إعادةعيين معرّف الإعلانات:</strong> يمكنك حذف أو إعادة تعيين معرّف الإعلانات الخاص بجهازك في أي وقت من خلال إعدادات أندرويد (<code>الإعدادات &gt; Google &gt; الإعلانات &gt; حذف معرّف الإعلانات</code>).</li>
+                    <li><strong>الحذف من داخل التطبيق:</strong> يمكنك حذف أي سيرة ذاتية أو أي قسم أو صورة شخصية في أي وقت بضغطة زر من الشاشة الرئيسية للتطبيق، ليتم مسحها فوراً ونهائياً من قاعدة البيانات المحلية.</li>
+                    <li><strong>المسح الكامل أو إلغاء التثبيت:</strong> يؤدي مسح بيانات التطبيق من إعدادات نظام أندرويد (<code>الإعدادات &gt; التطبيقات &gt; سيرة CV &gt; التخزين &gt; مسح البيانات</code>) أو إلغاء تثبيت التطبيق إلى إتلاف وحذف جميع البيانات المحفوظة على جهازك نهائياً.</li>
+                    <li><strong>حذف معرّف الإعلانات:</strong> يمكنك إعادة تعيين أو حذف معرّف الإعلانات الخاص بجهازك من خلال: <code>إعدادات الهاتف &gt; Google &gt; الإعلانات &gt; حذف معرّف الإعلانات</code>.</li>
                 </ul>
             </section>
 
             <section id="ar-6">
                 <h2>6. إجراءات أمن وحماية المعلومات</h2>
-                <p>نحن نحمي بياناتك الشخصية عبر إبقائها داخل بيئة النظام المعزولة والآمنة (Android Sandbox) على هاتفك وعدم نقلها عبر الشبكة. وفيما يخص طلبات الإعلانات، يتم تشفير جميع الاتصالات البرمجية عبر بروتوكولات الأمان القياسية (HTTPS/TLS). كما ننصح المستخدمين دائماً بتأمين هواتفهم برمز قفل أو بصمة لحماية ملفات الـ PDF المصدرة على أجهزتهم.</p>
+                <p>تُحفظ كافة بياناتك داخل بيئة النظام المعزولة والآمنة (Android Application Sandbox) الخاصة بالتطبيق على هاتفك، مما يمنع أي تطبيقات أخرى من الوصول إليها. كما أن جميع طلبات الإعلانات عبر الشبكة تتم عبر قنوات اتصال مشفرة باستخدام بروتوكول (HTTPS/TLS). ونوصي دائماً بحماية هاتفك بكلمة مرور أو بصمة لضمان أمان ملفات الـ PDF التي تقوم بتصديرها.</p>
             </section>
 
             <section id="ar-7">
                 <h2>7. خصوصية الأطفال (التوافق مع قانون COPPA)</h2>
-                <p>تطبيق "سيرة CV" هو أداة مهنية مخصصة للباحثين عن عمل والجمهور العام ممن تزيد أعمارهم عن 13 عاماً. نحن لا نستهدف الأطفال دون سن 13 عاماً ولا نجمع بيانات منهم عن قصد. إذا كنت ولي أمر وتعتقد أن طفلك قد أدخل بيانات في التطبيق على جهازه، يمكنك حذف تلك السيرة فوراً من داخل التطبيق أو إلغاء تثبيته.</p>
+                <p>تطبيق "سيرة CV" مخصص للباحثين عن عمل والمهنيين والجمهور العام ممن تبلغ أعمارهم 13 عاماً فما فوق. نحن لا نستهدف الأطفال دون سن 13 عاماً ولا نجمع أي بيانات شخصية منهم عن قصد.</p>
             </section>
 
             <section id="ar-8">
-                <h2>8. حقوق المستخدم الدولية والتحكم بالإعلانات (GDPR & CCPA)</h2>
-                <p>نحن نحترم حقوق الخصوصية العالمية للمستخدمين في كافة الدول:</p>
+                <h2>8. حقوق المستخدم الدولية والتحكم بالإعلانات (GDPR &amp; CCPA)</h2>
+                <p>نلتزم باحترام حقوق الخصوصية للمستخدمين بموجب القوانين الدولية (بما في ذلك اللائحة العامة لحماية البيانات الأوروبية GDPR وقانون خصوصية المستهلك في كاليفورنيا CCPA):</p>
                 <ul>
-                    <li><strong>حق الوصول والتعديل والمسح:</strong> يتيح لك التطبيق استعراض وتعديل وتصدير وحذف كافة بياناتك محلياً في أي لحظة دون قيود.</li>
-                    <li><strong>إيقاف تخصيص الإعلانات:</strong> يحق لك إلغاء الاشتراك في الإعلانات المخصصة بناءً على الاهتمامات من خلال التوجه إلى إعدادات جهازك الأندرويد: <code>الإعدادات &gt; Google &gt; الإعلانات</code> وتفعيل خيار إلغاء تخصيص الإعلانات أو حذف الرقم التعريفي للإعلانات.</li>
+                    <li><strong>حق الوصول والتعديل والحذف:</strong> متاح لك بشكل مباشر ولحظي داخل التطبيق لأن جميع البيانات مخزنة على جهازك.</li>
+                    <li><strong>إلغاء تخصيص الإعلانات (Opt-Out):</strong> يمكنك إيقاف الإعلانات المخصصة بناءً على الاهتمامات في أي وقت من إعدادات جهازك الأندرويد عبر التوجه إلى: <code>الإعدادات &gt; Google &gt; الإعلانات</code>.</li>
                 </ul>
             </section>
 
             <section id="ar-9">
-                <h2>9. شروط الاستخدام والملكية الفكرية</h2>
-                <h3>9.1 الاستخدام المقبول وإخلاء المسؤولية</h3>
-                <p>يُقدم التطبيق كأداة مساعدة لتصميم وتنسيق السير الذاتية. يتحمل المستخدم وحده المسؤولية الكاملة عن صحة ومصداقية ودقة المعلومات التي يدونها في سيرته الذاتية. لا يقدم التطبيق أي ضمانات بالتوظيف أو القبول في المقابلات الوظيفية.</p>
+                <h2>9. شروط الاستخدام وحقوق الملكية الفكرية</h2>
+                <h3>9.1 مسؤولية المستخدم وإخلاء المسؤولية</h3>
+                <p>التطبيق هو أداة تقنية لتنسيق وتصميم السير الذاتية. يتحمل المستخدم وحده المسؤولية القانونية الكاملة عن دقة ومصداقية البيانات المدخلة في سيرته الذاتية. لا يقدم التطبيق أي ضمانات بالحصول على وظيفة أو قبول في المقابلات.</p>
                 <h3>9.2 حقوق الملكية الفكرية</h3>
-                <p>إن الكود البرمجي، الهوية البصرية، الشعار، وتصاميم القوالب الخاصة بتطبيق "سيرة CV" هي ملكية فكرية خالصة للمطور (عمران الجعفري). وفي المقابل، <strong>يحتفظ المستخدم بالملكية الكاملة لحقوق محتواه الشخصي وملفات الـ PDF التي ينشئها</strong> عبر التطبيق، وله كامل الحرية في طباعتها ونشرها واستخدامها للأغراض المهنية والشخصية.</p>
+                <p>جميع حقوق الكود البرمجي، التصميم، الشعار، والقوالب داخل تطبيق "سيرة CV" محفوظة للمطور (عمران الجعفري). وفي المقابل، <strong>يحتفظ المستخدم بالملكية الكاملة لمحتوى سيرته الذاتية وملفات الـ PDF التي ينشئها</strong>، ويحق له طباعتها ومشاركتها واستخدامها لأي غرض شخصي أو مهني دون أي قيود.</p>
             </section>
 
             <section id="ar-10">
-                <h2>10. التعديلات على السياسة وبيانات التواصل</h2>
-                <p>قد نقوم بتحديث سياسة الخصوصية وشروط الاستخدام هذه من وقت لآخر لمواكبة الميزات الجديدة أو تحديثات سياسات متجر Google Play. سيتم نشر أي تعديل في هذه الصفحة مع تحديث تاريخ السريان في أعلى الوثيقة.</p>
-                <p>إذا كان لديك أي استفسار أو ملاحظة بخصوص سياسة الخصوصية أو التطبيق، يسعدنا تواصلك معنا:</p>
+                <h2>10. التحديثات وبيانات التواصل الرسمية</h2>
+                <p>قد نقوم بتحديث هذه السياسة من وقت لآخر لتواكب الميزات الجديدة أو المتطلبات القانونية، وسيتم نشر أي تعديل في هذه الصفحة مع تحديث تاريخ السريان.</p>
+                <p>لأي استفسارات أو طلبات دعم فني أو قانوني بخصوص هذه السياسة، يرجى التواصل مع المطور عبر القنوات الرسمية:</p>
                 <ul>
-                    <li><strong>المطور:</strong> عمران الجعفري (Amran Al-Gaafari)</li>
-                    <li><strong>حساب GitHub الرسمي:</strong> <a href="https://github.com/amran29" target="_blank">https://github.com/amran29</a></li>
-                    <li><strong>اسم التطبيق:</strong> سيرة CV (Sira CV)</li>
+                    <li><strong>اسم المطور:</strong> عمران الجعفري (Amran Al-Gaafari)</li>
+                    <li><strong>الصفحة الرسمية للمطور (GitHub):</strong> <a href="https://github.com/amran29" target="_blank" rel="noopener">https://github.com/amran29</a></li>
+                    <li><strong>البريد الإلكتروني للدعم:</strong> متاح عبر صفحة المطور في متجر Google Play وحساب GitHub الرسمي.</li>
+                </ul>
+            </section>
+        </article>
+
+        <hr class="divider-both" id="lang-divider">
+
+        <!-- ================= ENGLISH OFFICIAL VERSION ================= -->
+        <article id="en-section" class="en-block" lang="en">
+            
+            <div class="summary-cards">
+                <div class="summary-card">
+                    <strong>🔒 100% Offline-First</strong>
+                    <p>All your personal CV details and photos are stored strictly in your device's local SQLite database.</p>
+                </div>
+                <div class="summary-card">
+                    <strong>🛡️ Zero Cloud Uploads</strong>
+                    <p>No account required. We never upload, read, rent, or sell your resume data to external servers.</p>
+                </div>
+                <div class="summary-card">
+                    <strong>📷 Local Media Processing</strong>
+                    <p>Profile photos selected from your gallery are embedded into your PDF strictly inside device memory.</p>
+                </div>
+                <div class="summary-card">
+                    <strong>📢 Policy-Compliant Ads</strong>
+                    <p>Partnered with Start.io to serve non-intrusive ads using standard anonymous technical identifiers.</p>
+                </div>
+            </div>
+
+            <div class="toc-container">
+                <h3>Legal Clauses Index (Privacy Policy &amp; Terms of Service)</h3>
+                <ol class="toc-list">
+                    <li><a href="#en-1">Introduction &amp; Scope</a></li>
+                    <li><a href="#en-2">Information We Collect &amp; Storage Model</a></li>
+                    <li><a href="#en-3">Device Permissions Disclosure</a></li>
+                    <li><a href="#en-4">Third-Party SDKs &amp; Advertising (Start.io)</a></li>
+                    <li><a href="#en-5">Data Retention &amp; Instant Deletion Policy</a></li>
+                    <li><a href="#en-6">Data Security &amp; Encryption</a></li>
+                    <li><a href="#en-7">Children's Privacy (COPPA Compliance)</a></li>
+                    <li><a href="#en-8">International Privacy Rights (GDPR &amp; CCPA)</a></li>
+                    <li><a href="#en-9">Terms of Use &amp; Intellectual Property</a></li>
+                    <li><a href="#en-10">Policy Updates &amp; Contact Information</a></li>
+                </ol>
+            </div>
+
+            <section id="en-1">
+                <h2>1. Introduction &amp; Scope</h2>
+                <p>Welcome to <strong>Sira CV (سيرة CV)</strong> ("we," "our," or "us"). This official Privacy Policy, Data Safety Disclosure, and Terms of Service document governs your access to and use of the Sira CV mobile application available on the Google Play Store. This policy is structured in strict compliance with Google Play Developer Program Policies and Data Safety guidelines.</p>
+                <p>By downloading, installing, or using Sira CV, you acknowledge that you have read, understood, and agreed to the terms outlined in this document.</p>
+            </section>
+
+            <section id="en-2">
+                <h2>2. Information We Collect &amp; Storage Model</h2>
+                <h3>2.1 User-Provided Resume Information (Stored Locally Only)</h3>
+                <p>When building or editing a Curriculum Vitae (CV) within Sira CV, you voluntarily enter personal and professional details, including:</p>
+                <ul>
+                    <li>Full name, job title, and professional summary (Bio).</li>
+                    <li>Contact information (phone number, email address, physical city/country).</li>
+                    <li>Optional profile photograph chosen from your device's media library.</li>
+                    <li>Academic qualifications, work history, skills, languages, and custom sections.</li>
+                </ul>
+                <div class="guarantee-box">
+                    <strong>Strict Local Storage Guarantee:</strong> 100% of the personal and career data listed above is stored exclusively on your local mobile device inside an isolated SQLite database. We do not operate any cloud servers or remote databases, and your CV content is never transmitted, synced, or uploaded over the internet.
+                </div>
+
+                <h3>2.2 Automatically Collected Technical Data (Third-Party Advertising)</h3>
+                <p>While Sira CV's core resume builder operates offline, when your device has an active internet connection, our integrated third-party advertising partner (<strong>Start.io SDK</strong>) automatically collects standard, non-personally identifiable technical identifiers to serve ads and prevent ad fraud.</p>
+            </section>
+
+            <section id="en-3">
+                <h2>3. Device Permissions Disclosure</h2>
+                <p>Sira CV requests only the essential system permissions required to deliver its core features, as detailed in the table below:</p>
+                <table class="policy-table">
+                    <thead>
+                        <tr>
+                            <th>Permission / Package</th>
+                            <th>Technical Purpose &amp; Usage</th>
+                            <th>Shared Externally?</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Photo Gallery / MediaPicker</strong><br><code>image_picker</code></td>
+                            <td>Allows the user to optionally select a profile picture from their device to display on their PDF resume.</td>
+                            <td><strong>No.</strong> Processed 100% locally in device memory.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>PDF Generation &amp; Printing</strong><br><code>pdf &amp; printing</code></td>
+                            <td>Enables rendering, previewing, saving, and sharing exported PDF curriculum vitae files.</td>
+                            <td><strong>No.</strong> Exported files are controlled solely by the user.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Internet &amp; Network State</strong><br><code>INTERNET / ACCESS_NETWORK_STATE</code></td>
+                            <td>Used strictly to request and display banner and interstitial ads via Start.io when online.</td>
+                            <td><strong>Yes</strong> (Technical Ad IDs &amp; network metrics via Start.io).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Google Advertising ID</strong><br><code>com.google.android.gms.permission.AD_ID</code></td>
+                            <td>Utilized by Start.io SDK for frequency capping, ad delivery, and fraud prevention.</td>
+                            <td><strong>Yes</strong> (Processed by Google Play Services &amp; Start.io).</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="en-4">
+                <h2>4. Third-Party SDKs &amp; Advertising (Start.io)</h2>
+                <p>To keep Sira CV and all its professional PDF templates completely free, the application integrates the <strong>Start.io (formerly StartApp) Advertising SDK</strong>.</p>
+                <p>When online, the Start.io SDK may collect and process the following non-personal technical data:</p>
+                <ul>
+                    <li><strong>Device &amp; Advertising Identifiers:</strong> Google Advertising ID (GAID), device model, manufacturer, screen dimensions, and Android OS version.</li>
+                    <li><strong>Network &amp; Connection Data:</strong> IP address (used solely to infer approximate country/city location for relevant ads), mobile carrier, and network type.</li>
+                    <li><strong>Ad Performance Metrics:</strong> Ad impressions, clicks, and SDK diagnostic logs.</li>
+                </ul>
+                <p>For full details on Start.io's privacy practices and compliance, please review the official Start.io Privacy Policy: <a href="https://www.start.io/policy/privacy-policy/" target="_blank" rel="noopener">https://www.start.io/policy/privacy-policy/</a>.</p>
+            </section>
+
+            <section id="en-5">
+                <h2>5. Data Retention &amp; Instant Deletion Policy</h2>
+                <p>Because Sira CV does not maintain external user accounts or cloud databases, <strong>you hold complete and immediate control over your data retention and deletion</strong>:</p>
+                <ul>
+                    <li><strong>In-App Deletion:</strong> You can delete any individual section item, photo, or entire resume directly from the app's Home Screen at any time. This permanently deletes the data from the local SQLite database.</li>
+                    <li><strong>Full Data Erase / Uninstallation:</strong> Clearing the app data via Android Settings (<code>Settings &gt; Apps &gt; Sira CV &gt; Storage &gt; Clear Data</code>) or uninstalling the app permanently erases all locally stored records.</li>
+                    <li><strong>Deleting Advertising ID:</strong> You can reset or delete your Google Advertising ID at any time via your Android device settings (<code>Settings &gt; Google &gt; Ads &gt; Delete advertising ID</code>).</li>
                 </ul>
             </section>
 
-        </div>
+            <section id="en-6">
+                <h2>6. Data Security &amp; Encryption</h2>
+                <p>Your personal resume records remain protected inside Android's isolated application sandbox on your device. Furthermore, all external ad requests initiated by the Start.io SDK are encrypted in transit using industry-standard HTTPS/TLS protocols. We advise users to protect their smartphones with a screen lock or biometric authentication to safeguard exported PDF files.</p>
+            </section>
+
+            <section id="en-7">
+                <h2>7. Children's Privacy (COPPA Compliance)</h2>
+                <p>Sira CV is a career and business utility designed for job seekers and general audiences aged 13 and above. We do not knowingly target or collect personal information from children under the age of 13.</p>
+            </section>
+
+            <section id="en-8">
+                <h2>8. International Privacy Rights (GDPR &amp; CCPA)</h2>
+                <p>We respect global user privacy rights under regulations such as the EU General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA):</p>
+                <ul>
+                    <li><strong>Right to Access, Modify, and Delete:</strong> Exercised directly and instantaneously within the app since all personal records reside on your device.</li>
+                    <li><strong>Opt-Out of Personalized Ads:</strong> Users can opt out of interest-based advertising at any time through their Android device settings (<code>Settings &gt; Google &gt; Ads</code>).</li>
+                </ul>
+            </section>
+
+            <section id="en-9">
+                <h2>9. Terms of Use &amp; Intellectual Property</h2>
+                <h3>9.1 Acceptable Use &amp; Disclaimer</h3>
+                <p>Sira CV is a document formatting tool. The user assumes full responsibility for the accuracy, truthfulness, and legality of all information entered into their resumes. We provide no warranties regarding employment outcomes or recruitment success.</p>
+                <h3>9.2 Copyright &amp; Ownership</h3>
+                <p>The Sira CV application code, visual branding, logo, and template designs are the intellectual property of the developer (Amran Al-Gaafari). Conversely, <strong>you retain 100% ownership over your personal resume content and exported PDF documents</strong>, which you may freely print, share, and use for any personal or commercial career purpose.</p>
+            </section>
+
+            <section id="en-10">
+                <h2>10. Policy Updates &amp; Contact Information</h2>
+                <p>We may revise this Privacy Policy and Terms of Service periodically. Any updates will be published on this page with an updated effective date.</p>
+                <p>If you have any questions, legal inquiries, or support requests regarding this Privacy Policy, please contact the developer:</p>
+                <ul>
+                    <li><strong>Developer:</strong> Amran Al-Gaafari (عمران الجعفري)</li>
+                    <li><strong>Official GitHub:</strong> <a href="https://github.com/amran29" target="_blank" rel="noopener">https://github.com/amran29</a></li>
+                    <li><strong>Support Contact:</strong> Available via the official Google Play Store listing and GitHub profile.</li>
+                </ul>
+            </section>
+        </article>
 
     </div>
-</div>
+</main>
 
 <footer>
-    &copy; 2026 Sira CV Application • Developed by Amran Al-Gaafari (عمران الجعفري) • All Rights Reserved.
+    <strong>Sira CV • تطبيق سيرة لإنشاء السير الذاتية</strong><br>
+    &copy; 2026 Developed by Amran Al-Gaafari (عمران الجعفري) • All Rights Reserved.
 </footer>
 
 <script>
-    function switchLang(lang) {
-        const enDiv = document.getElementById('en-content');
-        const arDiv = document.getElementById('ar-content');
-        const btns = document.querySelectorAll('.lang-btn');
-        const subtitle = document.getElementById('app-subtitle');
+    function setLanguageView(mode) {
+        const arSec = document.getElementById('ar-section');
+        const enSec = document.getElementById('en-section');
+        const divider = document.getElementById('lang-divider');
+        const subtitle = document.getElementById('header-subtitle');
 
-        if (lang === 'ar') {
-            enDiv.style.display = 'none';
-            arDiv.style.display = 'block';
-            btns[0].classList.remove('active');
-            btns[1].classList.add('active');
-            subtitle.innerText = "وثيقة سياسة الخصوصية الشاملة، أمان البيانات، وشروط الاستخدام الرسمية";
+        document.getElementById('btn-both').classList.remove('active');
+        document.getElementById('btn-ar').classList.remove('active');
+        document.getElementById('btn-en').classList.remove('active');
+
+        if (mode === 'ar') {
+            arSec.classList.remove('hidden-section');
+            enSec.classList.add('hidden-section');
+            divider.classList.add('hidden-section');
+            document.getElementById('btn-ar').classList.add('active');
+            subtitle.innerText = "وثيقة سياسة الخصوصية الرسمية، أمان البيانات، وشروط الاستخدام";
+        } else if (mode === 'en') {
+            arSec.classList.add('hidden-section');
+            enSec.classList.remove('hidden-section');
+            divider.classList.add('hidden-section');
+            document.getElementById('btn-en').classList.add('active');
+            subtitle.innerText = "Official Privacy Policy, Google Play Data Safety & Terms of Service";
         } else {
-            enDiv.style.display = 'block';
-            arDiv.style.display = 'none';
-            btns[0].classList.add('active');
-            btns[1].classList.remove('active');
-            subtitle.innerText = "Comprehensive Privacy Policy, Data Safety & Terms of Service";
+            arSec.classList.remove('hidden-section');
+            enSec.classList.remove('hidden-section');
+            divider.classList.remove('hidden-section');
+            document.getElementById('btn-both').classList.add('active');
+            subtitle.innerText = "Official Privacy Policy & Terms of Service • سياسة الخصوصية وشروط الاستخدام";
         }
     }
 </script>
