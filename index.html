@@ -8,12 +8,12 @@
     <title>Privacy Policy & Terms of Service | Sira CV (سيرة CV)</title>
     <link rel="icon" type="image/png" href="logo.png">
 
-    <!-- استيراد خطوط Cairo (للعربية) و Inter (للإنجليزية) لضمان أعلى درجات الوضوح -->
+    <!-- استيراد خطوط Cairo و Inter لضمان أعلى درجات الوضوح -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- بيانات مهيكلة (Structured Data JSON-LD) لقارئات الذكاء الاصطناعي وفاحص Google Play -->
+    <!-- بيانات مهيكلة (JSON-LD) لقارئات الذكاء الاصطناعي وفاحص Google Play -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -25,6 +25,7 @@
       "publisher": {
         "@type": "Person",
         "name": "Amran Al-Gaafari",
+        "email": "amranalgaafari@gmail.com",
         "url": "https://github.com/amran29"
       },
       "about": {
@@ -37,20 +38,20 @@
     </script>
 
     <style>
-        /* الهوية البصرية الرسمية لتطبيق Sira CV (AppColors) */
+        /* الهوية البصرية الرسمية لتطبيق Sira CV */
         :root {
-            --primary: #12627A;        /* AppColors.primary */
-            --primary-deep: #134F60;   /* AppColors.primaryDeep */
-            --primary-light: #176C82;  /* AppColors.primaryLight */
-            --secondary: #434B4B;      /* AppColors.secondary */
-            --accent: #85A4AD;         /* AppColors.accent */
-            --accent-soft: #EBF3F5;    /* تدرج فاتح جداً مشتق من الهوية */
-            --bg-light: #F5F7FA;       /* AppColors.lightBackground */
-            --bg-dark: #0C131A;        /* AppColors.darkBackground */
+            --primary: #12627A;
+            --primary-deep: #134F60;
+            --primary-light: #176C82;
+            --secondary: #434B4B;
+            --accent: #85A4AD;
+            --accent-soft: #EBF3F5;
+            --bg-light: #F5F7FA;
+            --bg-dark: #0C131A;
             --white: #FFFFFF;
             --error: #BA1A1A;
-            --text-dark: #111827;      /* أسود فاحم مريح وواضح جداً للقراءة */
-            --text-medium: #2D3748;    /* رمادي داكن عالي التباين للفقرات */
+            --text-dark: #111827;
+            --text-medium: #2D3748;
             --border-color: #CBD5E1;
         }
 
@@ -70,7 +71,6 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* ترويسة الصفحة الرسمية */
         header {
             background: linear-gradient(135deg, var(--bg-dark) 0%, var(--primary-deep) 45%, var(--primary) 100%);
             color: var(--white);
@@ -115,7 +115,6 @@
             max-width: 680px;
         }
 
-        /* أزرار التحكم باللغة والعرض */
         .lang-controls {
             display: flex;
             justify-content: center;
@@ -144,7 +143,6 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
 
-        /* حاوية الوثيقة القانونية */
         .main-container {
             max-width: 980px;
             margin: -30px auto 60px;
@@ -159,7 +157,6 @@
             border: 1px solid var(--border-color);
         }
 
-        /* جدول البيانات التعريفية الرسمي (مهم جداً للذكاء الاصطناعي في جوجل) */
         .meta-banner {
             background: var(--accent-soft);
             border: 1px solid var(--accent);
@@ -191,7 +188,6 @@
             font-weight: 700;
         }
 
-        /* بطاقات الملخص السريع */
         .summary-cards {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
@@ -223,7 +219,6 @@
             font-weight: 500;
         }
 
-        /* فهرس المحتويات */
         .toc-container {
             background: var(--bg-light);
             padding: 22px 28px;
@@ -268,7 +263,6 @@
             text-decoration: underline;
         }
 
-        /* تنسيق الأقسام والفقرات */
         section {
             margin-bottom: 36px;
             padding-bottom: 28px;
@@ -329,7 +323,6 @@
             font-weight: 700;
         }
 
-        /* الجداول الرسمية */
         .policy-table {
             width: 100%;
             border-collapse: collapse;
@@ -361,7 +354,6 @@
             background: var(--bg-light);
         }
 
-        /* صندوق التنبيه الرسمي */
         .guarantee-box {
             background: var(--accent-soft);
             border: 1.5px solid var(--primary-light);
@@ -379,7 +371,6 @@
             border-right: 6px solid var(--primary);
         }
 
-        /* تخصيص الاتجاه والخط للقسم العربي */
         .ar-block {
             direction: rtl;
             text-align: right;
@@ -454,7 +445,7 @@
 <main class="main-container">
     <div class="document-sheet">
 
-        <!-- شريط البيانات التعريفية الرسمي لفاحص جوجل بلاي -->
+        <!-- شريط البيانات التعريفية الرسمي -->
         <div class="meta-banner">
             <div class="meta-item">
                 <span>Application Name</span>
@@ -465,11 +456,11 @@
                 <strong>Amran Al-Gaafari (عمران الجعفري)</strong>
             </div>
             <div class="meta-item">
-                <span>Data Storage Model</span>
-                <strong>100% Local (Offline-First SQLite)</strong>
+                <span>Official Contact Email</span>
+                <strong>amranalgaafari@gmail.com</strong>
             </div>
             <div class="meta-item">
-                <span>Effective & Updated Date</span>
+                <span>Effective Date</span>
                 <strong>October 28, 2026</strong>
             </div>
         </div>
@@ -627,8 +618,8 @@
                 <p>لأي استفسارات أو طلبات دعم فني أو قانوني بخصوص هذه السياسة، يرجى التواصل مع المطور عبر القنوات الرسمية:</p>
                 <ul>
                     <li><strong>اسم المطور:</strong> عمران الجعفري (Amran Al-Gaafari)</li>
+                    <li><strong>البريد الإلكتروني المباشر للدعم:</strong> <a href="mailto:amranalgaafari@gmail.com">amranalgaafari@gmail.com</a></li>
                     <li><strong>الصفحة الرسمية للمطور (GitHub):</strong> <a href="https://github.com/amran29" target="_blank" rel="noopener">https://github.com/amran29</a></li>
-                    <li><strong>البريد الإلكتروني للدعم:</strong> متاح عبر صفحة المطور في متجر Google Play وحساب GitHub الرسمي.</li>
                 </ul>
             </section>
         </article>
@@ -785,11 +776,11 @@
             <section id="en-10">
                 <h2>10. Policy Updates &amp; Contact Information</h2>
                 <p>We may revise this Privacy Policy and Terms of Service periodically. Any updates will be published on this page with an updated effective date.</p>
-                <p>If you have any questions, legal inquiries, or support requests regarding this Privacy Policy, please contact the developer:</p>
+                <p>If you have any questions, legal inquiries, or support requests regarding this Privacy Policy, please contact the developer directly:</p>
                 <ul>
                     <li><strong>Developer:</strong> Amran Al-Gaafari (عمران الجعفري)</li>
-                    <li><strong>Official GitHub:</strong> <a href="https://github.com/amran29" target="_blank" rel="noopener">https://github.com/amran29</a></li>
-                    <li><strong>Support Contact:</strong> Available via the official Google Play Store listing and GitHub profile.</li>
+                    <li><strong>Direct Support Email:</strong> <a href="mailto:amranalgaafari@gmail.com">amranalgaafari@gmail.com</a></li>
+                    <li><strong>Official GitHub Profile:</strong> <a href="https://github.com/amran29" target="_blank" rel="noopener">https://github.com/amran29</a></li>
                 </ul>
             </section>
         </article>
